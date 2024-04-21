@@ -1,4 +1,5 @@
 import '@/assets/styles/globals.css'
+import Navbar from '../components/Navbar'
 
 export const metadata = {
     title: 'here we go again in the next few seconds ...',
@@ -11,6 +12,7 @@ const MainLayout = ( {children}) => {
     <html lang="en">
       <body>
         <div>
+            <Navbar />
          <main>{children}</main>
         </div>
         
