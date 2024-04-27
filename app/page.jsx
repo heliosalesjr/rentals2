@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import HomeProperties from '@/components/HomeProperties';
 
 
-const HomePage = async () => {
+const HomePage = () => {
    
 
     return (
