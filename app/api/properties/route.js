@@ -1,11 +1,21 @@
 import connectBD from "@/config/database";  
+import Property from '@/models/Property';
+
+//GET /api/properties
 
 export const GET = async (request) => {
     try {
         await connectBD();
-        return new Response(JSON.stringify({message: "are you boa?"}), {status: 200});
+
+        const properties = await Property.find({});
+
+        return new Response(JSON.stringify(properties), {
+            status: 200,
+        });
+        
     } catch (error) {
         console.log(error);
-        return new Response("Oh no!", {status: 500})
+        return new Response("Oh no!", {
+            status: 500})
     }
 }
